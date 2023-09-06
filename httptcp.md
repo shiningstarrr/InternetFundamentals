@@ -109,8 +109,6 @@ https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves
 - Traffic going through the switch
     ➢ Switch has a MAC address and is configured with an IP address
     ➢ Switch essentially acts as a host in the network
-
-# Everything Routers do to facilitate communication
 - Unicast Frame vs Broadcast Frame:
     ➢ Unicast Frame - destination MAC address is a host: Switch will flood only if MAC address in not in the table
     ➢ Broadcast Frame - destination MAC address of FFFF.FFFF.FFFF: always Flooded
@@ -122,7 +120,60 @@ https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves
     ➢ Switches maintain independent MAC address Tables
     ➢ Switches perform switch actions indepently
 
+# Everything Routers do to facilitate communication
+- RFC: Internet Protocol
+- Routers are connected to a network and have an IP address and a MAC address.
+- Routers forward packets not destined to themselves.
+- Routers maintain a map of all the Networks they know about
+    ➢ Routing Table can be populated via three methods:
+        1. Directly Connected - Routes for the Networks which are attached
+        2. Static Routes - Routes manuelly provided by an Administrator
+        3. Dynamic Routes - Routes learned automatically from other routers
+- Routers also have ARP Table - mapping of L3 to L2 address
+    ➢ Everything with an IP address has an ARP Table
+    ➢ Start Empty - populated as needed with network traffic
+- Complete process of sending data between Host A and Host C:
+    1. Host A has data to send to Host C, and constructs the L3 header.
+    2. Host A knows packet must be sent to Default Gateway(R1)
+    3. Host A cannot construct L2 header since no ARP entry for Gateway's IP address(R1)
+    4. Host A sends ARP Request for 10.0.44.1
+    5. R1 populates its ARP Table with entry for 10.0.44.9
+    6. R1 sends ARP Response
+    7. Host populates its ARP Table with entry for 10.0.44.1
+    8. Host A constructs L2 header. Host A send packet to R1.
+    9. Router1 receives packet. R1 discards L2 header.
+    10. R1 look up Destination IP in Routing Table
+        ➢ Packet's next hop is to 10.0.55.2
+    11. R1 cannot construct L2 header
+    12. R1 sends ARP Request for 10.0.55.2
+    13. R2 populates its ARP Table with entry for 10.0.55.1
+    14. R2 sends ARP Response. R1 populates its ARP Table with entry for 10.0.55.2
+    15. R1 constructs L2 header. R1 sends packet to R2
+    16. R2 receives packet. R2 discards L2 header. R2 looks up Destination in Routing Table and find the final hop.
+    17. R2 cannot construct L2 header since No ARP entry for 10.0.66.7. R2 sends ARP Request for 10.0.66.7.
+    18. Host C populates its ARP Table with entry for 10.0.66.7. Host C sends ARP Response. R2 populates its ARP Table with entry for 10.0.66.7
+    19. Host C receives packet. Host C discards L2 header. Host C discards L3 header. Host C processes data.
 
-# Packages traveling: Host, Switch, Router, Switch, Host
+# Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TSL, HTTPS, DNS, DHCP
+- Protocols: Set of rules and messages that form an Internet Standard
+    ➢ ARP - Address Resolution Protocol (defined by RFC-826): Resolves IP to MAC mappings
+    ➢ FTP - File Transfer Protocol
+    ➢ SMTP - Simple Mail Transfer Protocol
+    ➢ HTTP - Hyper Text Transfer Protocol
+    ➢ SSL - Secure Sockets Layer
+    ➢ TSL - Transport Layer Security
+    ➢ HTTP - HTTP secured with SSL/TSL
+    ➢ TCP - Transmission Control Protocol
+    ➢ DNS - Domain Name System: converts Domain Names into IP addresses. Ex: site.com/email.com -> 160.8.23.154
+    ➢ DHCP - Dynamic Host Configuration Protocol: provides IP/SM/DG/DNS for Clients
+
+- Every host needs four items for Internet Connection:
+    ➢ Ip Address - Host's Identity on the Internet
+    ➢ Subnet mask - Determine speak to foreign network or not
+    ➢ Default Gateway - Router's IP Address
+    ➢ DNS Server IP(s) - Translate domain name into IP Address
+
+
+
 
 # Packages traveling: Host, Router, Switch, Router, Router, Host
