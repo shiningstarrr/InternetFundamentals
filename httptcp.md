@@ -2,7 +2,9 @@
 ⦾⦿➼⚫⚪➡•○✯✪✫🌟🎄°
 ⌛⚡➟⮞➤➣➢✔
 # Resources link:
-https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves-through-the-internet/
+🎄 https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves-through-the-internet/
+🎄 https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi
+
 # Network devices
 - Host
     ✫ Host is any device which send or receive traffic
@@ -166,14 +168,15 @@ https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves
     ➢ TCP - Transmission Control Protocol
     ➢ DNS - Domain Name System: converts Domain Names into IP addresses. Ex: site.com/email.com -> 160.8.23.154
     ➢ DHCP - Dynamic Host Configuration Protocol: provides IP/SM/DG/DNS for Clients
-
 - Every host needs four items for Internet Connection:
     ➢ Ip Address - Host's Identity on the Internet
     ➢ Subnet mask - Determine speak to foreign network or not
     ➢ Default Gateway - Router's IP Address
     ➢ DNS Server IP(s) - Translate domain name into IP Address
 
-
-
-
 # Packages traveling: Host, Router, Switch, Router, Router, Host
+- Data moves through networks based upon three tables:
+    ➢ MAC Address Table - Mapping of Switch Port to MAC Address
+    ➢ ARP Table/Cache - Mapping of IP address to MAC address
+    ➢ Routing Table - Mapping of IP Network to Interface or Next Router
+    
