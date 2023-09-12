@@ -179,4 +179,26 @@
     ➢ MAC Address Table - Mapping of Switch Port to MAC Address
     ➢ ARP Table/Cache - Mapping of IP address to MAC address
     ➢ Routing Table - Mapping of IP Network to Interface or Next Router
-    
+
+# TCP & UDP facts and myths
+- TCP: Transmission Control Protocol, UDP: User Datagram Protocol
+- Four important diff between TCP and UDP:
+    ➢ TCP: Connection Oriented: 
+        has official "start" and "end"
+       UDP: No Connection Oriented: 
+        No official "start" and "end"
+        connection defined by timeout
+    ➢ TCP is Reliable: 
+        1. confirmation of fata delivery
+        2. sender is aware of errors
+        3. Data is delivered in order
+        4. Flow control: TCP adjusts transmission rate to safely use maximum available bandwirdth without exceed.
+        5. More overhead: has a larger header (20bytes)
+       UDP: 
+       1. no confirmation of delivery
+       2. no error awareness
+       3. no intrinsic data ordering
+       4. no flow control: UDP transmits as fast as it can
+       5. Less overhead (8 bytes)
+- TCP and UDP has identical security
+- TCP does not guarantee delivery but provide confirmation of delivery
