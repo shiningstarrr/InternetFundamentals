@@ -202,3 +202,9 @@
        5. Less overhead (8 bytes)
 - TCP and UDP has identical security
 - TCP does not guarantee delivery but provide confirmation of delivery
+
+# DNS (Domain Name System)
+- use to translate domain names into IP Addresses
+
+# TCP Three Handshakes
+- 
