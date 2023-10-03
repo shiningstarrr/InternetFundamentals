@@ -1,6 +1,7 @@
 # Bullet Points
-⦾⦿➼⚫⚪➡•○✯✪✫🌟🎄°
-⌛⚡➟⮞➤➣➢✔
+⦾⦿➼⚫⚪➡•○✯✪✫✭➟⮞➤➣➢✔°✺
+🌟✨🌠🎄🎀⌛⚡⚠️🎆🎃🎊🎂🎅
+
 # Resources link:
 🎄 https://www.practicalnetworking.net/index/networking-fundamentals-how-data-moves-through-the-internet/
 🎄 https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi
