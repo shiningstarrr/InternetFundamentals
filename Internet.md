@@ -209,3 +209,26 @@
 
 # TCP Three Handshakes
 - 
+
+# HTTP (Hypertext Transfer Protocol) status codes
+- 1xx Informational: These are provisional responses indicating that the client's request is being processed.
+    ➢ 100 Continue
+    ➢ 101 Switching Protocols
+- 2xx Success: These indicate that the client's request was received, understood, and processed successfully.
+    ➢ 200 OK
+    ➢ 201 Created
+    ➢ 204 No Content
+- 3xx Redirection: These indicate that further action needs to be taken by the client to fulfill the request.
+    ➢ 301 Moved Permanently
+    ➢ 302 Found (or Moved Temporarily)
+    ➢ 304 Not Modified
+- 4xx Client Error: These indicate that there was a problem with the client's request.
+    ➢ 400 Bad Request
+    ➢ 401 Unauthorized
+    ➢ 403 Forbidden
+    ➢ 404 Not Found
+- 5xx Server Error: These indicate that there was an error on the server side while trying to fulfill the request.
+    ➢ 500 Internal Server Error
+    ➢ 502 Bad Gateway
+    ➢ 503 Service Unavailable
+    ➢ 504 Gateway Timeout
